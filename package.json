@@ -1,28 +1,33 @@
 {
-  "name": "gympass-server",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start:dev": "tsx watch src/server.ts",
-    "start": "node build/server.js",
-    "build": "tsup src --out-dir build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@types/node": "^22.10.1",
-    "prettier": "3.4.2",
-    "prisma": "^6.2.1",
-    "tsup": "^8.3.5",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2"
-  },
-  "dependencies": {
-    "@prisma/client": "^6.2.1",
-    "dotenv": "^16.4.7",
-    "fastify": "^5.1.0",
-    "zod": "^3.24.1"
-  }
+    "name": "gympass-server",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start:dev": "tsx watch src/server.ts",
+        "start": "node build/server.js",
+        "build": "tsup src --out-dir build",
+        "test": "vitest run",
+        "test:watch": "vitest"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "@types/node": "^22.10.1",
+        "prettier": "3.4.2",
+        "prisma": "^6.2.1",
+        "tsup": "^8.3.5",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.2",
+        "vite-tsconfig-paths": "^5.1.4",
+        "vitest": "^3.0.4"
+    },
+    "dependencies": {
+        "@prisma/client": "^6.2.1",
+        "dotenv": "^16.4.7",
+        "fastify": "^5.1.0",
+        "zod": "^3.24.1"
+    }
 }
