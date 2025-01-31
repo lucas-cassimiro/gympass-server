@@ -9,14 +9,14 @@ const registerBodySchema = z.object({
     firstName: z.string(),
     lastName: z.string(),
     email: z.string().email(),
-    passwordHash: z.string().min(6),
+    password: z.string().min(6),
 })
 
 export class RegisterController implements Controller {
     // constructor(private readonly registerService: RegisterService) {}
 
     async handle(request: Request): Promise<Response> {
-        const { firstName, lastName, email, passwordHash } =
+        const { firstName, lastName, email, password } =
             registerBodySchema.parse(request.body)
 
         try {
@@ -27,7 +27,7 @@ export class RegisterController implements Controller {
                 firstName,
                 lastName,
                 email,
-                passwordHash,
+                password,
             })
 
             return {

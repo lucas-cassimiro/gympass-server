@@ -6,5 +6,5 @@ Content-Type: application/json
     "firstName": "User 01",
     "lastName": "User 01",
     "email": "user5@email.com",
-    "passwordHash": "123456"
+    "password": "123456"
 }
